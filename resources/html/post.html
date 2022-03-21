@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLogger</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Cursor -->
+      <div class="cursor"></div>
+      <div class="cursor__dot"></div>
+
+      <!-- Subscribe modal -->
+      <div id="subscribe-modal">
+        <!-- Subscribe modal goes here -->
+      </div>
+      <!-- Search modal -->
+      <div id="search-modal">
+        <!-- Search modal goes here -->
+      </div>
+
+      <!-- Menu -->
+      <div id="menu">
+        <!-- Menu goes here -->
+      </div>
+      <div id="sidebar">
+        <!-- Sidebar goes here -->
+      </div>
+      <main>
+        <section id="post" class="post">
+          <div class="post__row">
+            <div class="post__col post__col--left">
+              <div class="post__back">
+                <a href="" class="trigger"
+                  ><ion-icon name="arrow-back-outline"></ion-icon>
+                </a>
+                <span>Back</span>
+              </div>
+            </div>
+            <div class="post__col post__col--right">
+              <div class="post__header">
+                <h1>Definite Guide to Make a More Productive Flow.</h1>
+                <div class="post__info">
+                  <div class="post__author">
+                    <div class="post__author__avatar avatar avatar--sm">
+                      <img src="image/author.jpg" alt="" />
+                    </div>
+                    <div class="post__author__details">
+                      <span>Author</span>
+                      <a href="">Ismayil Mirzayev</a>
+                    </div>
+                  </div>
+                  <div class="post__date">
+                    <span>Published</span>
+                    <span>January 11, 2022</span>
+                  </div>
+                  <div class="post__comments">
+                    <!-- <span>0 comments</span>
+                    <a href="#comments">Be the first to comment</a> -->
+                    <span>1 comments</span>
+                    <a href="#comments">Join the conversation</a>
+                  </div>
+                </div>
+              </div>
+              <div class="post__content">
+                <div class="post__content__row">
+                  <div class="post__content__col post__content__col--left">
+                    <div class="post__media">
+                      <img
+                        src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-29/clb_blog_2-768x768.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="post__body">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi hic quisquam consequatur cumque nobis facilis
+                        optio temporibus iusto alias ea assumenda vitae
+                        cupiditate vel quo molestiae dolor repellendus,
+                        blanditiis
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi hic quisquam consequatur cumque nobis facilis
+                        optio temporibus iusto alias ea assumenda vitae
+                        cupiditate vel quo molestiae dolor repellendus,
+                        blanditiis expedita dolorem et sequi. At rerum nihil
+                        quam odit atque dignissimos veniam, assumenda ab
+                        adipisci quis quisquam non, consequatur, aliquam
+                        doloribus quia doloremque numquam eligendi
+                        necessitatibus tenetur inventore? Tempora molestias aut
+                        ex dolorum itaque error sit voluptatum laborum illum
+                        rerum, deleniti facere dignissimos natus minima et!
+                        Perferendis, sint quos voluptates accusantium nisi iste,
+                        repellat ullam expedita sunt veritatis nesciunt sequi?
+                        Dolores hic ad temporibus voluptate nostrum provident a
+                        itaque quidem aut! Maxime quidem dicta numquam unde,
+                        obcaecati quam nisi nesciunt perspiciatis veniam
+                        voluptatem repudiandae placeat libero? Fuga expedita
+                        provident corporis saepe eaque. Iusto atque
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi hic quisquam consequatur cumque nobis facilis
+                        optio temporibus iusto alias ea assumenda vitae
+                        cupiditate vel quo molestiae dolor repellendus,
+                        blanditiis
+                      </p>
+                    </div>
+
+                    <div class="post__actions">
+                      <div class="post__likes">
+                        <ul>
+                          <li class="d-flex ai--center">
+                            <a href="" class="d-flex">
+                              <ion-icon
+                                class="mr-1"
+                                name="heart-outline"
+                              ></ion-icon>
+                            </a>
+                            <span class="text--sm">1200 likes</span>
+                          </li>
+                          <li>
+                            <a href=""> Report </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="post__share">
+                        <ul>
+                          <li>
+                            <a href="" title="Share on Facebook">
+                              <i class="fab fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="" title="Share on Twitter">
+                              <i class="fab fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="" title="Share on Linkedin">
+                              <i class="fab fa-linkedin-in"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="" title="Copy link">
+                              <i class="fas fa-link"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="" title="Save">
+                              <i class="far fa-bookmark"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Comments -->
+                    <div class="comments" id="comments">
+                      <div class="comments__inner">
+                        <h2>1 comments</h2>
+
+                        <ul class="comments__list">
+                          <li class="comment">
+                            <div class="comment__avatar avatar avatar--sm">
+                              <img src="image/author.jpg" alt="" />
+                            </div>
+                            <div class="comment__info">
+                              <div class="comment__author">
+                                <a href="">Ismayil Mirzayev</a>
+                              </div>
+                              <div class="comment__date">January 12, 2022</div>
+                              <div class="comment__text">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Odit, totam laborum! Quae
+                                debitis minima nostrum quidem amet molestias
+                                cupiditate atque?
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <!-- New comment -->
+                        <form action="" class="comment__form">
+                          <h2>Post a comment</h2>
+                          <div class="form__row">
+                            <!-- Comment name -->
+                            <div class="form__box">
+                              <label for="" class="form__label">
+                                Your name
+                                <span class="required">*</span>
+                              </label>
+                              <input type="text" class="form__input" />
+                            </div>
+
+                            <!-- Comment email -->
+                            <div class="form__box">
+                              <label for="" class="form__label">
+                                Your email
+                                <span class="required">*</span>
+                              </label>
+                              <input type="email" class="form__input" />
+                            </div>
+                          </div>
+
+                          <!-- Comment text -->
+                          <div class="form__box">
+                            <label for="" class="form__label">
+                              Leave a comment
+                              <span class="required">*</span>
+                            </label>
+                            <textarea class="form__textarea"></textarea>
+                          </div>
+                          <button class="btn btn--h">Post comment</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="post__content__col post__content__col--right">
+                    <div class="post__cards">
+                      <div class="post__card">
+                        <div class="post__card__header">
+                          <a href="" class="trigger trigger--2">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                          </a>
+                          <span>Previous post</span>
+                        </div>
+                        <div class="post__card__body">
+                          <h3>
+                            Outdoor Work: a Designer’s Checklist for Every UX
+                            Project.
+                          </h3>
+                        </div>
+                      </div>
+                      <div class="post__card">
+                        <div class="post__card__header">
+                          <span>Next post</span>
+                          <a href="" class="trigger trigger--2">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                          </a>
+                        </div>
+                        <div class="post__card__body">
+                          <h3>
+                            Outdoor Work: a Designer’s Checklist for Every UX
+                            Project.
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__sidebar m-0">
+                      <div class="profile__sidebar__header">
+                        <div class="avatar avatar--md">
+                          <img src="image/author.jpg" alt="" />
+                        </div>
+                        <div class="profile__user">
+                          <div class="profile__user__name">
+                            Ismayil Mirzayev
+                          </div>
+                          <div class="profile__user__followers">
+                            2K followers
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile__actions">
+                        <a href="" class="btn btn--primary">Follow</a>
+                        <a href="" title="Subscribe" class="btn btn--notext">
+                          <ion-icon name="mail-unread-outline"></ion-icon>
+                        </a>
+                      </div>
+                      <div class="my-5">
+                        <h3 class="mb-3">Bio</h3>
+                        <p class="color--muted text--sm">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Dolore laudantium commodi consectetur ex
+                          corrupti explicabo sit, ipsa eius accusamus sapiente.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="footer">
+          <!-- footer goes here -->
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- scripts -->
+  <script src="js/app.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</html>

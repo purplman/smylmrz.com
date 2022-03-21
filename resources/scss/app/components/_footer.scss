@@ -1,0 +1,66 @@
+footer {
+    background: lighten($color: $black, $amount: 2%);
+}
+.footer {
+    padding-top: 3rem;
+    color: $white;
+
+    a {
+        color: darken($color: $white, $amount: 25%);
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__brand {
+        width: 4rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__col {
+        width: 100%;
+
+        h4 {
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__socials {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        font-weight: 600;
+
+        ul {
+            display: flex;
+        }
+
+        li:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    &__copyright {
+        padding: 1rem 0;
+        border-top: 1px solid lighten($color: $black, $amount: 5%);
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        color: darken($color: $white, $amount: 25%);
+    }
+}

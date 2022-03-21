@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLogger</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Cursor -->
+      <div class="cursor"></div>
+      <div class="cursor__dot"></div>
+
+      <!-- Subscribe modal -->
+      <div id="subscribe-modal">
+        <!-- Subscribe modal goes here -->
+      </div>
+      <!-- Search modal -->
+      <div id="search-modal">
+        <!-- Search modal goes here -->
+      </div>
+
+      <!-- Menu -->
+      <div id="menu">
+        <!-- Menu goes here -->
+      </div>
+      <div id="sidebar">
+        <!-- Sidebar goes here -->
+      </div>
+      <main>
+        <section id="posts" class="posts">
+          <div class="posts__header">
+            <h1 class="title">
+              Search results for : <span class="color--primary">tech</span>
+            </h1>
+            <p class="color--muted">
+              Found 5 posts matching your search query.
+            </p>
+          </div>
+          <div class="posts__content">
+            <div class="cards cards--4 mb-3">
+              <div class="card">
+                <div class="card__content">
+                  <div class="card__top">
+                    <div class="card__header">
+                      <div class="card__header__top">
+                        <div class="card__avatar avatar avatar--sm">
+                          <img src="image/author.jpg" alt="author" />
+                        </div>
+                        <div class="card__info">
+                          <div class="card__author">
+                            Posted by <span>Ismayil Mirzayev</span>
+                          </div>
+                          <div class="card__date">January 6, 2022</div>
+                        </div>
+                      </div>
+                      <div class="card__header__bottom">
+                        <ul class="card__categories">
+                          <li>
+                            <a href="">Creative</a>
+                          </li>
+                          <li>
+                            <a href="">Travel</a>
+                          </li>
+                          <li>
+                            <a href="">Tech</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card__body">
+                      <h2>
+                        <a href="post.html">
+                          Definite Guide to Make a More Productive Flow.
+                        </a>
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="card__bottom">
+                    <div class="card__footer">
+                      <a href="post.html" class="card__cta">
+                        Read more
+                        <ion-icon
+                          class="ml-2"
+                          name="arrow-forward-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__media">
+                  <div class="card__media__overlay"></div>
+                  <div
+                    class="card__media__img"
+                    style="
+                      background-image: url('https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-29/clb_blog_2-768x768.jpg');
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="btn btn--icon">
+              <span> Load more </span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+          </div>
+        </section>
+        <div id="footer">
+          <!-- footer goes here -->
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- scripts -->
+  <script src="js/app.js"></script>
+</html>

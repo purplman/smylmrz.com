@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiftie</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor__dot"></div>
+
+    <!-- Menu -->
+
+    <div id="menu">
+      <!-- Menu goes here -->
+    </div>
+
+    <div class="wrapper">
+      <div id="sidebar">
+        <!-- Sidebar goes here -->
+      </div>
+
+      <main>
+        <section id="auth">
+          <h1 class="title">
+            Sign in
+            <span class="mark mark__dot">.</span>
+          </h1>
+
+          <p class="form__text">Please log in to continue.</p>
+
+          <form class="form">
+            <div class="form__box">
+              <label class="form__label">
+                E-mail <span class="required">*</span>
+              </label>
+              <input class="form__input" type="email" />
+            </div>
+            <div class="form__box">
+              <label class="form__label">
+                Password <span class="required">*</span>
+              </label>
+              <input class="form__input" type="password" />
+            </div>
+            <div class="form__footer">
+              <div class="form__footer-left">
+                <div class="form__box">
+                  <input type="checkbox" />
+                  Remember me
+                </div>
+              </div>
+              <div class="form__footer-right">
+                <a href="forgot.html">Lost your password?</a>
+              </div>
+            </div>
+            <button class="btn btn--primary my-3">Sign in</button>
+
+            <div class="mt-1">
+              Don't have an account. You can create on
+              <a class="form__link" href="register.html">here</a>.
+            </div>
+          </form>
+        </section>
+        <div id="footer"></div>
+      </main>
+    </div>
+  </body>
+
+  <!-- scripts -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/app.js"></script>
+</html>

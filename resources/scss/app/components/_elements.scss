@@ -1,0 +1,106 @@
+.cursor,
+.cursor__dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 11;
+}
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid darken($color: $black, $amount: 10%);
+    transition: 0.2s ease-out;
+
+    &--fixed {
+        width: 3rem;
+        height: 3rem;
+        position: fixed;
+        transform: none;
+    }
+
+    &__dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        transition: 0.1s ease-out;
+        background: darken($color: $black, $amount: 10%);
+
+        &--expand {
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+        }
+    }
+}
+
+.newsletter-form {
+    position: relative;
+
+    input {
+        width: 100%;
+        background: lighten($color: $black, $amount: 10%);
+        padding: 1rem 0 1rem 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        outline: none;
+        color: $white;
+    }
+
+    button {
+        position: absolute;
+        border: none;
+        background: transparent;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $white;
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translateZ(0);
+    visibility: hidden;
+    z-index: 1000;
+
+    &--outer {
+        margin-left: -15px;
+        margin-top: -15px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.1s ease-out;
+        border: 1px solid $black;
+
+        &.hovering {
+            margin-top: 0;
+            margin-left: 0;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &--inner {
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        margin-top: -3px;
+        background: $black;
+
+        &.hovering {
+            width: 18px;
+            height: 18px;
+            margin-left: -9px;
+            margin-top: -9px;
+            opacity: 0.8;
+        }
+    }
+}

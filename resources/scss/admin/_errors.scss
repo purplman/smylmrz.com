@@ -1,0 +1,9 @@
+.errors {
+    margin-bottom: 2rem;
+    color: #da0a2c;
+    font-weight: 600;
+
+    li:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}

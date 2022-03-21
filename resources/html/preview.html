@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLogger</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Cursor -->
+      <div class="cursor"></div>
+      <div class="cursor__dot"></div>
+
+      <!-- Subscribe modal -->
+      <div id="subscribe-modal">
+        <!-- Subscribe modal goes here -->
+      </div>
+      <!-- Search modal -->
+      <div id="search-modal">
+        <!-- Search modal goes here -->
+      </div>
+
+      <!-- Menu -->
+      <div id="menu">
+        <!-- Menu goes here -->
+      </div>
+      <div id="sidebar">
+        <!-- Sidebar goes here -->
+      </div>
+      <main>
+        <section id="preview">
+          <h3 class="title">Story preview</h3>
+          <div class="preview">
+            <div class="preview__left">
+              <div class="preview__img">
+                <label id="post-image">
+                  Include a high-quality image in your story to make it more
+                  inviting to readers.
+                  <input id="post-image-input" type="file" />
+                </label>
+                <img src="" id="post-image-preview" alt="" />
+              </div>
+              <h2 class="preview__title mb-3">Test</h2>
+              <div class="preview__body">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="preview__right">
+              <div class="form__box">
+                <label class="form__label">
+                  Add or change tags (up to 5) so readers know what your story
+                  is about
+                </label>
+                <div class="form__tags">
+                  <input
+                    placeholder="Tag"
+                    class="form__tags__input"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <button class="btn btn--primary">Publish</button>
+            </div>
+          </div>
+        </section>
+
+        <div id="footer">
+          <!-- footer goes here -->
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/tag.js"></script>
+
+  <script>
+    $(document).on("change", "#post-image-input", (e) => {
+      $("#post-image").hide();
+
+      $("#post-image-preview").show();
+
+      const [file] = e.target.files;
+      if (file) {
+        $("#post-image-preview").attr("src", URL.createObjectURL(file));
+      }
+    });
+  </script>
+</html>

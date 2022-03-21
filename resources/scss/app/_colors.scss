@@ -1,0 +1,15 @@
+$white: #fff;
+$black: #17161a;
+$primary: #da0a2c;
+$chalk: #f4f4f4;
+$muted: #555;
+
+.bg {
+    &--dark {
+        background: $black;
+    }
+
+    &--light {
+        background: $white;
+    }
+}

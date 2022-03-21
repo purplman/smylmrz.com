@@ -1,0 +1,33 @@
+@mixin square($s) {
+    width: $s;
+    height: $s;
+}
+
+.custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translateZ(0);
+    visibility: hidden;
+
+    &--outer {
+        @include square(30px);
+        margin-left: -15px;
+        margin-top: -15px;
+        border: 1px solid $primary;
+        box-sizing: border-box;
+        z-index: 10000000;
+        opacity: 0.5;
+        transition: all 0.08s ease-out;
+    }
+
+    &--inner {
+        @include square(6px);
+        margin-left: -3px;
+        margin-top: -3px;
+        z-index: 10000001;
+        background-color: $primary;
+    }
+}

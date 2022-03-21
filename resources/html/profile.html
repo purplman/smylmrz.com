@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiftie</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor__dot"></div>
+
+    <!-- Subscribe modal -->
+    <div id="subscribe-modal">
+      <!-- Subscribe modal goes here -->
+    </div>
+    <!-- Search modal -->
+    <div id="search-modal">
+      <!-- Search modal goes here -->
+    </div>
+
+    <!-- Menu -->
+    <div id="menu">
+      <!-- Menu goes here -->
+    </div>
+    <div id="sidebar">
+      <!-- Sidebar goes here -->
+    </div>
+      <main>
+        <section id="profile">
+          <div class="profile">
+            
+            <div class="box ai--center jc--space-between">
+              <div class="tabs">
+                <ul>
+                  <li class="tab">
+                    <a data-target="posts-card" data-dir="profile" class="tab__link tab__link--active" href="">Publications</a>
+                  </li>
+                  <li class="tab">
+                    <a data-target="followers-card" data-dir="profile" class="tab__link" href="">Followers</a>
+                  </li>
+                  <li class="tab">
+                    <a data-target="following-card" data-dir="profile" class="tab__link" href="">Following</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="profile__actions">
+                <a href="start.html" class="btn btn--primary">Start a post</a>
+                <a href="settings.html" class="btn">Edit profile</a>
+              </div>
+            </div>
+
+            <div class="profile__body">
+            
+              <div class="profile__sidebar w--30">
+                <div class="profile__sidebar__header">
+                  <div class="avatar avatar--md">
+                    <img src="image/author.jpg" alt="">
+                  </div>
+                  <div class="profile__user">
+                    <div class="profile__user__name">Ismayil Mirzayev</div>
+                    <div class="profile__user__followers">2K followers</div>
+                  </div>
+                </div>
+                <div class="profile__actions">
+                  <a href="" class="btn btn--primary">Follow</a>
+                  <a href="" title="Subscribe" class="btn btn--notext">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                  </a>
+                </div>
+                <div class="my-5">
+                  <h3 class="mb-3">Bio</h3>
+                  <p class="color--muted text--sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laudantium commodi consectetur ex corrupti explicabo sit, ipsa eius accusamus sapiente.</p>
+                </div>
+                <div>
+                  <ul class="profile__sidebar__categories">
+                    <li>
+                      <a href="">Tech</a>
+                    </li>
+                    <li>
+                      <a href="">Creative</a>
+                    </li>
+                    <li>
+                      <a href="">Finance</a>
+                    </li>
+                    <li>
+                      <a href="">Travel</a>
+                    </li>
+                    <li>
+                      <a href="">Health</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="profile__cards">
+                <div class="profile__card" id="profile-posts-card">
+                  <div class="cards cards--3 mb-3">
+                    <div class="card">
+                      <div class="card__content">
+                        <div class="card__top">
+                          <div class="card__header">
+                            <div class="card__header__top">
+                              <div class="card__avatar avatar avatar--sm">
+                                <img src="image/author.jpg" alt="author" />
+                              </div>
+                              <div class="card__info">
+                                <div class="card__author">
+                                  Posted by <span>Ismayil Mirzayev</span>
+                                </div>
+                                <div class="card__date">January 6, 2022</div>
+                              </div>
+                            </div>
+                            <div class="card__header__bottom">
+                              <ul class="card__categories">
+                                <li>
+                                  <a href="">Creative</a>
+                                </li>
+                                <li>
+                                  <a href="">Travel</a>
+                                </li>
+                                <li>
+                                  <a href="">Tech</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card__body">
+                            <h2>
+                              <a href=""> Definite Guide to Make a More Productive Flow. </a>
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="card__bottom">
+                          <div class="card__footer">
+                            <a href="" class="card__cta">
+                              Read more
+                              <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card__media">
+                        <div class="card__media__overlay"></div>
+                        <div
+                          class="card__media__img"
+                          style="
+                            background-image: url('https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-29/clb_blog_2-768x768.jpg');
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div id="profile-followers-card"></div>
+                <div id="profile-following-card"></div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <div id="footer">
+          <!-- footer goes here -->
+        </div>
+      </main>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+  <!-- scripts -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/tab.js"></script>
+</html>

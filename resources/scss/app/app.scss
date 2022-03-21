@@ -1,0 +1,25 @@
+@import "colors";
+@import "animations";
+@import "type";
+@import "reset";
+@import "spacings";
+@import "layout";
+@import "utilities";
+@import "responsive";
+
+// components
+@import "components/header";
+@import "components/hero";
+@import "components/buttons";
+@import "components/elements";
+@import "components/cursor";
+@import "components/modals";
+@import "components/menu";
+@import "components/footer";
+
+// sections
+@import "sections/projects";
+@import "sections/products";
+
+// pages
+@import "pages/case";

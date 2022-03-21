@@ -1,0 +1,105 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background: rgb(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.2s ease-out;
+    pointer-events: none;
+
+    &__closer {
+        background: lighten($color: $black, $amount: 2%);
+        font-size: 1.5rem;
+
+        ion-icon {
+            color: $white;
+        }
+    }
+
+    &--active {
+        pointer-events: all;
+        opacity: 1;
+
+        @for $i from 1 through 5 {
+            .menu__list-item:nth-child(#{$i}) {
+                -webkit-animation: slide 0.2s * $i 1 forwards;
+                animation: slide 0.2s * $i 1 forwards;
+            }
+        }
+    }
+
+    &__list {
+        font-size: 3rem;
+        font-weight: 600;
+        max-width: 30rem;
+
+        &-item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .dropdown {
+                position: absolute;
+                width: 100%;
+                min-width: 35rem;
+                left: 100%;
+                top: 0;
+                opacity: 0;
+                transition: 0.2s ease-out;
+                padding-left: 2rem;
+                pointer-events: none;
+            }
+
+            &:hover {
+                .dropdown {
+                    pointer-events: all;
+                    opacity: 1;
+
+                    @for $i from 1 through 3 {
+                        li:nth-child(#{$i}) {
+                            -webkit-animation: slide 0.5s * $i 1 forwards;
+                            animation: slide 0.5s * $i 1 forwards;
+                        }
+                    }
+                }
+
+                > a {
+                    transform: translateX(1rem);
+                    color: $primary;
+
+                    > ion-icon {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        a {
+            color: $white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+                color: $primary;
+            }
+
+            ion-icon {
+                font-size: 1rem;
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.errors {
+  margin-bottom: 2rem;
+  color: #da0a2c;
+  font-weight: 600;
+}
+.errors li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.form__box:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.form__label {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.form__label span:first-child {
+  margin-right: 0.25rem;
+}
+.form__input, .form__textarea {
+  display: flex;
+  width: 100%;
+  border: none;
+  background: #f3f3f5;
+  padding: 0.75rem 0 0.75rem 1rem;
+  border-radius: 0.625rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+}
+.form__button {
+  border: none;
+  color: #fff;
+  background: #1b1c1e;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  font-family: inherit;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+.form__button:hover {
+  background: #333539;
+}
+.form__link {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1b1c1e;
+}
+
+.auth {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f3f3f5;
+}
+.auth__form {
+  min-width: 450px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.sidebar {
+  position: fixed;
+  width: 18rem;
+  height: 100%;
+  padding: 2rem;
+  border-right: 1px solid #f3f3f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar__logo {
+  max-width: 5rem;
+  filter: invert(1);
+  margin-bottom: 2rem;
+}
+.sidebar__menu li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #979aa1;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.625rem;
+  transition: 0.3s ease-out;
+  position: relative;
+  background: #fafafa;
+}
+.sidebar__link ion-icon {
+  font-size: 1.5rem;
+}
+.sidebar__link:hover {
+  background: #1b1c1e;
+  color: #fff;
+}
+
+main {
+  margin-left: 18rem;
+}

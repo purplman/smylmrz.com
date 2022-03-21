@@ -1,0 +1,67 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    // cursor: none;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $chalk;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $black;
+}

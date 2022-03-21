@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body,
+input,
+textarea,
+button {
+    font-family: "Roboto", sans-serif;
+}
+
+.caption {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+
+    &--light {
+        color: $white;
+    }
+
+    &--sm {
+        font-size: 1rem;
+    }
+}

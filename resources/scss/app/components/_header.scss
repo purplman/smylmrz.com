@@ -1,0 +1,35 @@
+#header {
+    background-image: url("../../../../public/img/bg.png");
+    background-size: cover;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+
+    &__col {
+        width: 10rem;
+    }
+
+    &__logo {
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &--dark {
+        background: $black;
+    }
+}

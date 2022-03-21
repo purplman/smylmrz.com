@@ -1,0 +1,54 @@
+.form {
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__label {
+        display: flex;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+
+        span:first-child {
+            margin-right: 0.25rem;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        display: flex;
+        width: 100%;
+        border: none;
+        background: $chalk;
+        padding: 0.75rem 0 0.75rem 1rem;
+        border-radius: 0.625rem;
+        font-family: inherit;
+        font-size: 0.75rem;
+    }
+
+    &__button {
+        border: none;
+        color: $white;
+        background: $black;
+        font-weight: 700;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.625rem;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        font-family: inherit;
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+
+        &:hover {
+            background: lighten($black, 10%);
+        }
+    }
+
+    &__link {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $black;
+    }
+}

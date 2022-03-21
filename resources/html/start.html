@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLogger</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Cursor -->
+      <div class="cursor"></div>
+      <div class="cursor__dot"></div>
+
+      <!-- Subscribe modal -->
+      <div id="subscribe-modal">
+        <!-- Subscribe modal goes here -->
+      </div>
+      <!-- Search modal -->
+      <div id="search-modal">
+        <!-- Search modal goes here -->
+      </div>
+
+      <!-- Menu -->
+      <div id="menu">
+        <!-- Menu goes here -->
+      </div>
+      <div id="sidebar">
+        <!-- Sidebar goes here -->
+      </div>
+      <main>
+        <section id="new-story">
+          <div class="start">
+            <h1 class="title">Write a new story</h1>
+            <form action="" class="form">
+              <div class="form__box">
+                <input class="start__input" type="text" placeholder="Title" />
+              </div>
+              <div class="form__box">
+                <textarea
+                  id="editor"
+                  class="start__text"
+                  placeholder="Tell your story"
+                ></textarea>
+              </div>
+              <button class="btn btn--lg">Publish</button>
+            </form>
+          </div>
+        </section>
+
+        <div id="footer">
+          <!-- footer goes here -->
+        </div>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- scripts -->
+  <script src="js/app.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script>
+
+  <script>
+    ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
+      console.error(error);
+    });
+  </script>
+</html>
