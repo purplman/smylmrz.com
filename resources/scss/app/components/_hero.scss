@@ -1,7 +1,14 @@
 .hero {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    padding-top: 15%;
+    margin-top: -112px;
+    background-image: url("../../../../public/img/bg.png");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: flex;
+    }
 
     h3 {
         text-transform: uppercase;

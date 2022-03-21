@@ -16,7 +16,7 @@
         
         <x-menu/>
         
-        <x-headers.default aria-label="header" id="header"/>
+        <x-headers.default class="header--dark" aria-label="header" id="header"/>
         <main id="app">
             {{ $slot }}
         </main>
