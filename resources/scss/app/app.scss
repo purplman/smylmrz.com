@@ -17,10 +17,10 @@
 @import "components/menu";
 @import "components/card";
 @import "components/footer";
-
-// sections
-@import "sections/projects";
-@import "sections/products";
+@import "components/form";
 
 // pages
+@import "pages/projects";
+@import "pages/products";
 @import "pages/case";
+@import "pages/contact";

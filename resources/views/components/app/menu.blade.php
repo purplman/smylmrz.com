@@ -63,7 +63,7 @@
                     </ul>
                 </li>
                 <li class="menu__list-item">
-                    <a href="">
+                    <a href="{{ route('contact') }}">
                         <span>Contact</span>
                     </a>
                 </li>

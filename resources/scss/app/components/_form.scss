@@ -1,0 +1,42 @@
+.form {
+    &__row {
+        @media (min-width: 600px) {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    &__box {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        margin-bottom: 1rem;
+        font-weight: 600;
+        display: flex;
+
+        .required {
+            margin-left: 0.25rem;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        outline: none;
+        width: 100%;
+        display: flex;
+        border: none;
+        background-color: $chalk;
+        border-radius: 0.25rem;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        resize: none;
+        border: 2px solid transparent;
+        transition: 0.3s ease-out;
+
+        &:autofill {
+            border-color: $black;
+        }
+    }
+}

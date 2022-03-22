@@ -2,10 +2,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1rem;
+
+    @media (min-width: 600px) {
+        padding: 2rem 4rem;
+    }
 
     &__col {
-        width: 10rem;
+        width: 100%;
+
+        &:nth-child(2) {
+            display: none;
+
+            @media (min-width: 600px) {
+                display: block;
+            }
+        }
+
+        @media (min-width: 600px) {
+            width: 10rem;
+        }
     }
 
     &__logo {

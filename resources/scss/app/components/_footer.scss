@@ -2,8 +2,12 @@ footer {
     background: lighten($color: $black, $amount: 2%);
 }
 .footer {
-    padding-top: 3rem;
+    padding-top: 2rem;
     color: $white;
+
+    @media (min-width: 600px) {
+        padding-top: 4rem;
+    }
 
     a {
         color: darken($color: $white, $amount: 25%);
@@ -18,13 +22,24 @@ footer {
     }
 
     &__row {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         gap: 2rem;
+        margin-bottom: 2rem;
+
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
     }
 
     &__col {
         width: 100%;
+        margin-bottom: 2rem;
+
+        @media (min-width: 600px) {
+            bottom: 0;
+        }
 
         h4 {
             margin-bottom: 2rem;
@@ -38,8 +53,6 @@ footer {
 
     &__socials {
         margin-top: 2rem;
-        margin-bottom: 2rem;
-
         font-weight: 600;
 
         ul {

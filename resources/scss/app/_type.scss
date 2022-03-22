@@ -9,7 +9,11 @@ button {
 
 .caption {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 600px) {
+        margin-bottom: 2rem;
+    }
 
     &--light {
         color: $white;
@@ -17,5 +21,13 @@ button {
 
     &--sm {
         font-size: 1rem;
+    }
+}
+
+.title {
+    font-size: 2rem;
+
+    @media (min-width: 600px) {
+        font-size: 4rem;
     }
 }
