@@ -1,3 +1,3 @@
-<x-layouts.app.base>
-    <x-products></x-products>
-</x-layouts.app.base>
+<x-app.layouts.master>
+    <x-app.products></x-app.products>
+</x-app.layouts.master>

@@ -11,7 +11,7 @@
     <div id="app">
         <div class="wrapper">
             <x-admin.sidebar/>
-            <main>
+            <main class="dashboard">
                 {{ $slot }}
             </main>
         </div>

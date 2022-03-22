@@ -1,4 +1,4 @@
-<x-layouts.app.master>
+<x-app.layouts.master>
     <div class="case">
         <div class="case__grid">
             <div class="case__gallery case__col">
@@ -62,4 +62,4 @@
         </h2>
     </div>
     
-</x-layouts.app.master>
+</x-app.layouts.master>

@@ -1,18 +1,17 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\App;
 
-use App\Models\Project as ModelsProject;
 use Illuminate\View\Component;
 
-class Project extends Component
+class Product extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public ModelsProject $project, public string $size = '')
+    public function __construct(public  $product)
     {
         //
     }
@@ -24,6 +23,6 @@ class Project extends Component
      */
     public function render()
     {
-        return view('components.project');
+        return view('components.app.product');
     }
 }

@@ -1,3 +1,3 @@
-<x-layouts.app.master>
-    <x-projects></x-projects>
-</x-layouts.app.master>
+<x-app.layouts.master>
+    <x-app.projects></x-app.projects>
+</x-app.layouts.master>

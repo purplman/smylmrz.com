@@ -1,17 +1,18 @@
 <?php
 
-namespace App\View\Components\Layouts\Admin;
+namespace App\View\Components\App;
 
+use App\Models\Project as ModelsProject;
 use Illuminate\View\Component;
 
-class Auth extends Component
+class Project extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public string $title)
+    public function __construct(public ModelsProject $project, public string $size = '')
     {
         //
     }
@@ -23,6 +24,6 @@ class Auth extends Component
      */
     public function render()
     {
-        return view('components.layouts.admin.auth');
+        return view('components.app.project');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\App;
 
 use Illuminate\View\Component;
 use stdClass;
@@ -33,6 +33,6 @@ class Products extends Component
         $products = [
             $product
         ];
-        return view('components.products', compact('products'));
+        return view('components.app.products', compact('products'));
     }
 }

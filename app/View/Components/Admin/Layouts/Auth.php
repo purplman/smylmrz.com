@@ -1,17 +1,17 @@
 <?php
 
-namespace App\View\Components\Layouts\Admin;
+namespace App\View\Components\Admin\Layouts;
 
 use Illuminate\View\Component;
 
-class Main extends Component
+class Auth extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(public string $title)
     {
         //
     }
@@ -23,6 +23,6 @@ class Main extends Component
      */
     public function render()
     {
-        return view('components.layouts.admin.main');
+        return view('components.admin.layouts.auth');
     }
 }

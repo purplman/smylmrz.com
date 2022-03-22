@@ -15,7 +15,7 @@
         </div>
         <div class="header__col">
             <div class="header__cta">
-                <x-buttons.primary href="">Get a quote</x-buttons.primary>
+                <x-app.buttons.primary href="">Get a quote</x-app.buttons.primary>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="footer__col">
-                    <x-caption class="caption--light caption--sm">Work inquiries</x-caption>
+                    <x-app.caption class="caption--light caption--sm">Work inquiries</x-app.caption>
                     <p>Interested in working with me?</p>
                     <div>
                         <a href="mailto:smylmrzpro@gmail.com">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="footer__col">
-                    <x-caption class="caption--light caption--sm">Take a look</x-caption>
+                    <x-app.caption class="caption--light caption--sm">Take a look</x-app.caption>
                     <div>
                         <ul>
                             <li class="mb-2">
@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="footer__col">
-                    <x-caption class="caption--light caption--sm">Sign up for newsletter</x-caption>
-                    <x-newsletter-form></x-newsletter-form>
+                    <x-app.caption class="caption--light caption--sm">Sign up for newsletter</x-app.caption>
+                    <x-app.newsletter-form></x-app.newsletter-form>
                 </div>
             </div>
             <div class="footer__copyright">

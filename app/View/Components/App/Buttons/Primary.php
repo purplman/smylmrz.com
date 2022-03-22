@@ -1,17 +1,17 @@
 <?php
 
-namespace App\View\Components\Layouts\App;
+namespace App\View\Components\App\Buttons;
 
 use Illuminate\View\Component;
 
-class Master extends Component
+class Primary extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public string $title = 'Ismayil Mirzayev - Freelance Web Developer')
+    public function __construct(public string $href)
     {
         //
     }
@@ -23,6 +23,6 @@ class Master extends Component
      */
     public function render()
     {
-        return view('components.layouts.app.master');
+        return view('components.app.buttons.primary');
     }
 }

@@ -1,4 +1,4 @@
-<x-layouts.admin.auth title="Register">
+<x-admin.layouts.auth title="Register">
     <form class="auth__form" action="{{ route('register.handle') }}" method="post">
         <x-admin.errors />
         @csrf
@@ -21,4 +21,4 @@
             <a href="{{ route('login.index') }}">Login here</a>
         </div>
     </form>
-</x-layouts.admin.auth>
+</x-admin.layouts.auth>

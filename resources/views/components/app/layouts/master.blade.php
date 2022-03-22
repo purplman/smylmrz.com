@@ -9,18 +9,20 @@
 </head>
 <body>
     <div class="wrapper">
-        <x-cursor/>
+        <x-app.cursor/>
 
-        <x-modals.newsletter/>
-        <x-modals.search/>
+        <x-app.modals.newsletter/>
+        <x-app.modals.search/>
         
-        <x-menu/>
+        <x-app.menu/>
         
-        <x-headers.default class="header--dark" aria-label="header" id="header"/>
+        <x-app.headers.default class="header--dark" aria-label="header" id="header"/>
         <main id="app">
             {{ $slot }}
         </main>
-        <x-footer />
+
+        <!-- Footer -->
+        <x-app.footer />
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>

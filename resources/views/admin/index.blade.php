@@ -1,3 +1,3 @@
-<x-layouts.admin.main>
+<x-admin.layouts.main>
     Welcome {{ auth()->user()->name }}
-</x-layouts.admin.main>
+</x-admin.layouts.main>
