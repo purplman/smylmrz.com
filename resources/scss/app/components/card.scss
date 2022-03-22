@@ -1,0 +1,13 @@
+.card {
+    border-radius: 0.5rem;
+    padding: 2rem;
+
+    &--floating {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 10000;
+        transition: 0.3s ease-out;
+        background: $white;
+    }
+}

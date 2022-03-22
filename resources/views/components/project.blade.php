@@ -14,7 +14,7 @@
             </p>
         </div>
         <div class="project__cta">
-            <a href="">
+            <a href="{{ route('projects.show', 1) }}">
                 <span>Show project</span>
                 <ion-icon name="arrow-forward-outline"></ion-icon>
             </a>

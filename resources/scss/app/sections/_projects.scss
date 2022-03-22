@@ -23,6 +23,7 @@
 
     &__subtitle {
         display: flex;
+        padding-left: 8px;
     }
 
     &__title {
@@ -33,10 +34,12 @@
 
     &__description {
         max-width: 50%;
+        padding-left: 8px;
         line-height: 2;
     }
 
     &__cta {
+        padding-left: 8px;
         font-size: 1.25rem;
         font-weight: 600;
 

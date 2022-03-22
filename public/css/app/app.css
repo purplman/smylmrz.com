@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
 .bg--dark {
   background: #17161a;
@@ -63,7 +62,6 @@ button {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -678,7 +676,7 @@ ion-icon {
 
 .hero {
   margin-top: -112px;
-  background-image: url(/images/bg.png?4184cce41f1130c588f151a30974bce4);
+  background-image: url(/images/bg2.png?cab168822ca3f4e1a095b2fc1be25030);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -1059,6 +1057,19 @@ ion-icon {
   transition: 0.2s ease-out;
 }
 
+.card {
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+.card--floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+  transition: 0.3s ease-out;
+  background: #fff;
+}
+
 footer {
   background: #1c1b20;
 }
@@ -1137,15 +1148,18 @@ footer {
 }
 .project__subtitle {
   display: flex;
+  padding-left: 8px;
 }
 .project__title h1 {
   font-size: 8rem;
 }
 .project__description {
   max-width: 50%;
+  padding-left: 8px;
   line-height: 2;
 }
 .project__cta {
+  padding-left: 8px;
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -1184,64 +1198,52 @@ footer {
 }
 
 .case {
-  padding: 5rem 0;
+  padding: 4rem;
 }
-.case__tags {
+.case__grid {
   display: flex;
-  font-size: 0.875rem;
-  font-weight: 500;
+  gap: 2rem;
 }
-.case__tags li:not(:last-child) {
-  margin-right: 0.5rem;
+.case__col {
+  max-width: 50%;
+}
+.case__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .case__info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
 }
-.case__info a {
-  color: #fff;
+.case__subtitle {
+  padding-left: 5px;
+  display: flex;
 }
-.case__info a:hover {
-  color: #da0a2c;
-}
-.case__info ul {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.case__subtitle h4 {
+  margin-right: 0.5rem;
 }
 .case__title {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.case p {
-  color: #f4f4f4;
+.case__description {
+  padding-left: 5px;
+  margin-bottom: 2rem;
   line-height: 2;
-  width: 75%;
+  max-width: 75%;
 }
 .case__cta {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-left: 5px;
   font-size: 1.25rem;
   font-weight: 600;
+}
+.case__cta a {
   display: flex;
   align-items: center;
 }
-.case__cta span {
+.case__cta span:first-child {
   margin-right: 0.5rem;
-}
-.case__media {
-  margin-top: 2rem;
-}
-.case__collab {
-  margin-top: 5rem;
-}
-.case__contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.case__contact h2 {
-  font-size: 2.5rem;
-  color: #fff;
 }
