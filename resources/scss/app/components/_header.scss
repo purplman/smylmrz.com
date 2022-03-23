@@ -32,6 +32,8 @@
         img {
             height: 100%;
             vertical-align: middle;
+            -webkit-filter: invert(1);
+                    filter: invert(1);
         }
     }
 

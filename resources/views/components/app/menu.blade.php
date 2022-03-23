@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="menu__list-item">
-                    <a href="">
+                    <a role="button" href="">
                         <span>Blog</span>
                         <ion-icon name="add-outline"></ion-icon>
                     </a>
@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li class="menu__list-item">
-                    <a href="{{ route('store') }}">
+                    <a role="button" href="">
                         <span>Store</span>
                         <ion-icon name="add-outline"></ion-icon>
                     </a>
@@ -56,7 +56,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{ route('store') }}">
                                 <span>View products</span>
                             </a>
                         </li>

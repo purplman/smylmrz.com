@@ -28,6 +28,14 @@ $(() => {
         $(".custom-cursor").removeClass("hovering");
     });
 
+    $(document).on("click", () => {
+        $(".custom-cursor--outer").addClass("clicking");
+
+        setTimeout(() => {
+            $(".custom-cursor--outer").removeClass("clicking");
+        }, 250);
+    });
+
     // Modal scripts
 
     // Open modal
@@ -42,5 +50,11 @@ $(() => {
         e.preventDefault();
         const target = $(this).data("target");
         $(`#${target}`).find(".modal").removeClass("modal--active");
+    });
+
+    $('a[role="button"]').on("click", (e) => {
+        e.preventDefault();
+
+        console.log("working");
     });
 });

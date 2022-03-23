@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 4rem;
     background: rgb(0, 0, 0, 0.9);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -15,6 +14,11 @@
     opacity: 0;
     transition: 0.2s ease-out;
     pointer-events: none;
+    padding: 1rem;
+
+    @media (min-width: 600px) {
+        padding: 2rem 4rem;
+    }
 
     &__closer {
         background: lighten($color: $black, $amount: 2%);
@@ -38,9 +42,19 @@
     }
 
     &__list {
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        max-width: 30rem;
+
+        &:hover {
+            .menu__list-item {
+                opacity: 0.5;
+            }
+        }
+
+        @media (min-width: 600px) {
+            font-size: 3rem;
+            max-width: 30rem;
+        }
 
         &-item {
             position: relative;
@@ -52,9 +66,8 @@
             .dropdown {
                 position: absolute;
                 width: 100%;
-                min-width: 35rem;
-                left: 100%;
                 top: 0;
+                left: 100%;
                 opacity: 0;
                 transition: 0.2s ease-out;
                 padding-left: 2rem;
@@ -75,7 +88,6 @@
                 }
 
                 > a {
-                    transform: translateX(1rem);
                     color: $primary;
 
                     > ion-icon {

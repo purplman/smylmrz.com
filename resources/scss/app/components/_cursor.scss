@@ -21,6 +21,12 @@
         z-index: 10000000;
         opacity: 0.5;
         transition: all 0.08s ease-out;
+
+        &.hovering {
+            margin-top: 0;
+            margin-left: 0;
+            @include square(3rem);
+        }
     }
 
     &--inner {
@@ -29,5 +35,16 @@
         margin-top: -3px;
         z-index: 10000001;
         background-color: $primary;
+
+        &.hovering {
+            @include square(18px);
+            margin-left: -9px;
+            margin-top: -9px;
+            opacity: 0.8;
+        }
+    }
+
+    &.clicking {
+        background: $primary;
     }
 }

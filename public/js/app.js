@@ -19503,6 +19503,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       transform: "translate(".concat(e.x, "px, ").concat(e.y, "px)")
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".custom-cursor").removeClass("hovering");
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".custom-cursor--outer").addClass("clicking");
+    setTimeout(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".custom-cursor--outer").removeClass("clicking");
+    }, 250);
   }); // Modal scripts
   // Open modal
 
@@ -19516,6 +19522,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     e.preventDefault();
     var target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data("target");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#".concat(target)).find(".modal").removeClass("modal--active");
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('a[role="button"]').on("click", function (e) {
+    e.preventDefault();
+    console.log("working");
   });
 });
 
