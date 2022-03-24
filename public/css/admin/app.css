@@ -71,7 +71,7 @@ body {
 .form__button {
   border: none;
   color: #fff;
-  background: #1b1c1e;
+  background: #18171c;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: 0.625rem;
@@ -82,13 +82,13 @@ body {
   font-size: 0.75rem;
 }
 .form__button:hover {
-  background: #333539;
+  background: #302e38;
 }
 .form__link {
   margin-top: 2rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #1b1c1e;
+  color: #18171c;
 }
 
 .auth {
@@ -108,38 +108,80 @@ body {
   position: fixed;
   width: 18rem;
   height: 100%;
-  padding: 2rem;
-  border-right: 1px solid #f3f3f5;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.sidebar__logo {
-  max-width: 5rem;
-  filter: invert(1);
+.sidebar__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.sidebar__avatar__img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.sidebar__avatar__text {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+.sidebar__section__title {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.sidebar__section:not(:last-child) {
   margin-bottom: 2rem;
 }
 .sidebar__menu li:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .sidebar__link {
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: #979aa1;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 0;
   border-radius: 0.625rem;
   transition: 0.3s ease-out;
   position: relative;
-  background: #fafafa;
+  opacity: 0.5;
+}
+.sidebar__link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40%;
+  width: 4px;
+  border-radius: 1px;
+  background: #f3f3f5;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  box-shadow: 0 0 4px #f3f3f5;
+}
+.sidebar__link--active, .sidebar__link:hover {
+  opacity: 1;
+}
+.sidebar__link--active:after, .sidebar__link:hover:after {
+  opacity: 1;
 }
 .sidebar__link ion-icon {
   font-size: 1.5rem;
 }
-.sidebar__link:hover {
-  background: #1b1c1e;
-  color: #fff;
+
+.wrapper {
+  background: #18171c;
+  min-height: 100vh;
 }
 
 .dashboard {
