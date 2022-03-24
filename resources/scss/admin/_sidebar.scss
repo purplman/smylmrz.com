@@ -3,21 +3,49 @@
     width: 18rem;
     height: 100%;
     padding: 2rem;
-    border-right: 1px solid $chalk;
     display: flex;
+    background: darken($black, 1%);
     flex-direction: column;
     justify-content: space-between;
 
-    &__logo {
-        max-width: 5rem;
-        -webkit-filter: invert(1);
-        filter: invert(1);
-        margin-bottom: 2rem;
+    &__avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+
+        &__img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid $chalk;
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            color: $white;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    &__section {
+        &__title {
+            color: $white;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
     }
 
     &__menu {
         li:not(:last-child) {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -25,21 +53,40 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: lighten($color: $black, $amount: 50%);
-        font-weight: 600;
-        padding: 0.75rem 1.5rem;
+        color: $white;
+        font-weight: 500;
+        padding: 0.75rem 0;
         border-radius: 0.625rem;
         transition: 0.3s ease-out;
         position: relative;
-        background: darken($color: $white, $amount: 2%);
+        opacity: 0.5;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50%;
+            width: 4px;
+            border-radius: 1px;
+            background: $chalk;
+            opacity: 0;
+            transition: 0.3s ease-out;
+            box-shadow: 0 0 3px $chalk;
+        }
+
+        &--active,
+        &:hover {
+            opacity: 1;
+
+            &:after {
+                opacity: 1;
+            }
+        }
 
         ion-icon {
             font-size: 1.5rem;
-        }
-
-        &:hover {
-            background: $black;
-            color: $white;
         }
     }
 }

@@ -5,7 +5,13 @@
 @import "./form";
 @import "./auth";
 @import "./sidebar";
+@import "./card";
 
+.wrapper {
+    background: $black;
+    min-height: 100vh;
+}
 .dashboard {
     margin-left: 18rem;
+    padding: 2rem;
 }

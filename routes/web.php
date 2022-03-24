@@ -45,5 +45,7 @@ Route::middleware('auth')->group(function() {
         ->name('dashboard.')
         ->group(function() {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
+
+        Route::view('/projects', 'admin.projects.index')->name('projects.index');
     });
 });

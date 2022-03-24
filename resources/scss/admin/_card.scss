@@ -1,0 +1,12 @@
+.card {
+    background: lighten($black, 2%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+}
