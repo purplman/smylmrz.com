@@ -5,7 +5,7 @@
                 <img src="{{ asset('img/avatar.jpg') }}">
             </div>
             <div class="sidebar__avatar__text">
-                Hi, {{ auth()->user()->name }}
+                Hi, {{ auth()->user()->firstname }}
             </div>
         </div>
         <div class="sidebar__menu">
@@ -52,13 +52,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="{{ route('logout') }}">
-                            <ion-icon name="exit-outline"></ion-icon>
-                            <span>Logout</span>
+                        <a class="sidebar__link" href="">
+                            <ion-icon name="mail-unread-outline"></ion-icon>
+                            <span>Requests</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="sidebar__bottom">
+        <a class="sidebar__link" href="{{ route('logout') }}">
+            <ion-icon name="exit-outline"></ion-icon>
+            <span>Logout</span>
+        </a>
     </div>
 </aside>

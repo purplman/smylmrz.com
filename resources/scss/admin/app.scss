@@ -6,12 +6,17 @@
 @import "./auth";
 @import "./sidebar";
 @import "./card";
+@import "./table";
 
 .wrapper {
-    background: $black;
     min-height: 100vh;
+    background: darken($black, 2%);
 }
 .dashboard {
     margin-left: 18rem;
     padding: 2rem;
+    background: $black;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    min-height: 100vh;
 }
