@@ -6,7 +6,7 @@
         @endisset
     </label>
     <input 
-        class="form__input" 
+        {{ $attributes->merge(['class' => 'form__input']) }} 
         type="{{ $type }}" 
         name="{{ $name }}"
         placeholder="{{ $placeholder }}" 

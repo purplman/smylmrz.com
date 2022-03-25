@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -46,6 +47,16 @@ Route::middleware('auth')->group(function() {
         ->group(function() {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
 
-        Route::view('/projects', 'admin.projects.index')->name('projects.index');
+        Route::controller(AdminProjectController::class)
+            ->name('projects.')
+            ->prefix('projects')
+            ->group(function() {
+                Route::get('/', 'index')->name('index');
+                Route::get('/create', 'create')->name('create');
+                Route::post('/store', 'store')->name('store');
+                Route::get('/edit', 'edit')->name('edit');
+                Route::get('/show', 'show')->name('show');
+            });
+        
     });
 });

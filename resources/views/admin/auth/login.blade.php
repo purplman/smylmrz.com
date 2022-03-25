@@ -11,8 +11,6 @@
         
         <x-admin.form-button>Sign in</x-admin.form-button>
 
-        <div class="form__link">
-            <a href="{{ route('register.index') }}">Register a new account</a>
-        </div>
+        <a class="form__link" href="{{ route('register.index') }}">Register a new account</a>
     </form>
 </x-admin.layouts.auth>

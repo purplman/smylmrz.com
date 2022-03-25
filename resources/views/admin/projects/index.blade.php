@@ -6,6 +6,9 @@
     <x-admin.card>
         <x-admin.card-title>
             Projects
+            <x-admin.add-button href="{{ route('dashboard.projects.create') }}">
+                Create new project
+            </x-admin.add-button>
         </x-admin.card-title>
         <div class="card__body">
             <x-admin.data-table>
@@ -24,81 +27,38 @@
                     </tr>
                 </thead>
                 <tbody id="table-body" class="table__body">
+                    @foreact($projects as $project)
                     <tr>
                         <td>
-                            Esport LLC
+                            {{ $project->title }}
                         </td>
                         <td>
-                            January, 2019
+                            {{ $project->date }}
                         </td>
                         <td>
-                            Web Application
+                            {{ $project->category }}
                         </td>
                         <td class="table__actions">
-                            <a href="">
+                            <a href="{{ route('dashboard.projects.show', $project->id) }}">
                                 View
                             </a>
-                            <a href="">
+                            <a href="{{ route('dashboard.projects.edit', $project->id) }}">
                                 Edit
                             </a>
-                            <a href="">
+                            <a href="{{ route('dashboard.projects.destroy', $project->id) }}">
                                 Delete
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            Esport LLC
-                        </td>
-                        <td>
-                            January, 2019
-                        </td>
-                        <td>
-                            Web Application
-                        </td>
-                        <td class="table__actions">
-                            <a href="">
-                                View
-                            </a>
-                            <a href="">
-                                Edit
-                            </a>
-                            <a href="">
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Esport LLC
-                        </td>
-                        <td>
-                            January, 2019
-                        </td>
-                        <td>
-                            Web Application
-                        </td>
-                        <td class="table__actions">
-                            <a href="">
-                                View
-                            </a>
-                            <a href="">
-                                Edit
-                            </a>
-                            <a href="">
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </x-admin.data-table>
-            <div id="pagination"></div>
         </div>
     </x-admin.card>
 
     @section('scripts')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/admin/datatable.js') }}"></script>
 
     <script>
         $(document).ready( function () {

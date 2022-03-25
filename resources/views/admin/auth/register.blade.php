@@ -17,8 +17,6 @@
         
         <x-admin.form-button>Sign up</x-admin.form-button>
 
-        <div class="form__link">
-            <a href="{{ route('login.index') }}">Login here</a>
-        </div>
+        <a class="form__link" href="{{ route('login.index') }}">Login here</a>
     </form>
 </x-admin.layouts.auth>

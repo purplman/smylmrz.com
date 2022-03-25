@@ -1,0 +1,84 @@
+.dataTable {
+    width: 100% !important;
+    border: none !important;
+
+    tbody tr {
+        background-color: transparent !important;
+    }
+
+    thead td {
+        border-bottom: none !important;
+    }
+}
+.card .dataTables_wrapper {
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_info,
+    .dataTables_processing,
+    .dataTables_paginate {
+        color: $chalk !important;
+    }
+
+    .dataTables {
+        &_length,
+        &_filter {
+            margin-bottom: 1rem;
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        &_filter {
+            input {
+                padding: 0.75rem 1rem !important;
+                border-radius: 0.625rem !important;
+                font-family: inherit !important;
+                font-size: 0.75rem;
+                border: none !important;
+                background: $black;
+                color: $chalk;
+                min-width: 20rem;
+            }
+        }
+
+        &_info,
+        &_paginate {
+            margin-top: 1rem;
+            padding-top: 0 !important;
+        }
+
+        &_length {
+            select {
+                border-radius: 0.5rem !important;
+                border: none !important;
+                background-color: $black;
+                color: $chalk;
+                padding: 0.75rem !important;
+                font-family: "Poppins", sans-serif;
+                font-size: 1rem;
+
+                option {
+                    color: $chalk;
+                }
+            }
+        }
+
+        &_paginate {
+            .paginate_button {
+                border-radius: 0.5rem !important;
+                padding: 0.25rem 1rem !important;
+                transition: 0.2s ease-out;
+                color: $chalk !important;
+
+                &.current,
+                &:hover {
+                    background: $chalk !important;
+                    color: $black !important;
+                }
+            }
+        }
+    }
+}
