@@ -68,6 +68,7 @@ body {
   border-radius: 0.625rem;
   font-family: inherit;
   font-size: 0.875rem;
+  resize: none;
 }
 .form__input--dark, .form__textarea--dark {
   background-color: #18171c;
@@ -234,12 +235,19 @@ body {
   display: flex;
   gap: 1rem;
 }
-.table__actions a {
+.table__actions a,
+.table__actions button {
   color: #f3f3f5;
   opacity: 0.5;
   transition: 0.3s ease-out;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
-.table__actions a:hover {
+.table__actions a:hover,
+.table__actions button:hover {
   opacity: 1;
 }
 
@@ -322,6 +330,35 @@ body {
 }
 .btn span {
   margin-right: 0.5rem;
+}
+
+.alert {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 1rem;
+  background-color: #1d1c22;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  color: #f3f3f5;
+  align-items: center;
+  transition: 0.3s ease-out;
+}
+.alert--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.alert__icon {
+  display: flex;
+  background-color: #18171c;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
 }
 
 .wrapper {

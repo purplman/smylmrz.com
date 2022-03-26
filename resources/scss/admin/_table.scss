@@ -28,10 +28,17 @@
     &__actions {
         display: flex;
         gap: 1rem;
-        a {
+
+        a,
+        button {
             color: $chalk;
             opacity: 0.5;
             transition: 0.3s ease-out;
+            background: transparent;
+            border: none;
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            cursor: pointer;
 
             &:hover {
                 opacity: 1;

@@ -9,6 +9,7 @@
         {{ $attributes->merge(['class' => 'form__input']) }} 
         type="{{ $type }}" 
         name="{{ $name }}"
+        value="{{ $value }}"
         placeholder="{{ $placeholder }}" 
         {{ isset($required) ? 'required' : '' }}
     >

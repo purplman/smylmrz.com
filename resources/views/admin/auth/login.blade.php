@@ -5,7 +5,7 @@
         <x-admin.form-box placeholder="Your email" required="true" type="email" name="email">
             Email
         </x-admin.form-box>
-        <x-admin.form-box placeholder="" required="true" type="password" name="password">
+        <x-admin.form-box placeholder="New password" required="true" type="password" name="password">
             Password
         </x-admin.form-box>
         

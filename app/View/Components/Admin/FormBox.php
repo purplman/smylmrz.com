@@ -15,7 +15,8 @@ class FormBox extends Component
         public bool $required,
         public string $type,
         public string $name,
-        public string $placeholder
+        public string $placeholder,
+        public string $value = '',
     )
     {
         //

@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody id="table-body" class="table__body">
-                    @foreact($projects as $project)
+                    @foreach($projects as $project)
                     <tr>
                         <td>
                             {{ $project->title }}
@@ -39,15 +39,14 @@
                             {{ $project->category }}
                         </td>
                         <td class="table__actions">
-                            <a href="{{ route('dashboard.projects.show', $project->id) }}">
-                                View
-                            </a>
                             <a href="{{ route('dashboard.projects.edit', $project->id) }}">
                                 Edit
                             </a>
-                            <a href="{{ route('dashboard.projects.destroy', $project->id) }}">
-                                Delete
-                            </a>
+                            <form data-action="delete" method="post" action="{{ route('dashboard.projects.destroy', $project->id) }}">
+                                @csrf
+                                @method('delete')
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
