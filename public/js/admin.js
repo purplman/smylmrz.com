@@ -11,13 +11,15 @@ if (alert) {
   }, 3000);
 }
 
-var deleteForm = document.querySelector("form[data-action]");
-deleteForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+var deleteForms = document.querySelectorAll("form[data-action='delete']");
+deleteForms.forEach(function (deleteForm) {
+  deleteForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (confirm("Are you sure?")) {
-    this.submit();
-  }
+    if (confirm("Are you sure?")) {
+      this.submit();
+    }
+  });
 });
 /******/ })()
 ;

@@ -2,8 +2,8 @@
 
 namespace App\View\Components\App;
 
+use App\Models\Product;
 use Illuminate\View\Component;
-use stdClass;
 
 class Products extends Component
 {
@@ -24,15 +24,8 @@ class Products extends Component
      */
     public function render()
     {
-        $product = new stdClass;
-        $product->name = 'Javascript Developer';
-        $product->category = 'Classis Pullover Hoodie';
-        $product->link = 'https://dev-tee-tops.creator-spring.com/listing/js-developer-collection?product=212';
-        $product->image = 'https://vangogh.teespring.com/v3/image/5T9J_B4uqegSJzQxAXSMmr3hQ6E/800/800.jpg';
-        
-        $products = [
-            $product
-        ];
+        $products = Product::all();
+
         return view('components.app.products', compact('products'));
     }
 }

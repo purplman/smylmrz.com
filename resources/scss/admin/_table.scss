@@ -23,6 +23,12 @@
     td {
         padding: 1rem 2rem !important;
         width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 5rem;
+        }
     }
 
     &__actions {

@@ -1,7 +1,7 @@
 <div {{ $attributes->merge(['class' => 'product']) }}>
     <div class="product__img">
         <a target="_blank" href="{{ $product->link }}" rel="noopener noreferrer">
-            <img src="{{ $product->image }}" alt="">
+            <img src="{{ $product->image_link }}" alt="{{ $product->name }}">
         </a>
     </div>
     <div class="product__content">

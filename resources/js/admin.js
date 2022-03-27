@@ -6,12 +6,14 @@ if (alert) {
     }, 3000);
 }
 
-const deleteForm = document.querySelector("form[data-action]");
+const deleteForms = document.querySelectorAll("form[data-action='delete']");
 
-deleteForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+deleteForms.forEach((deleteForm) => {
+    deleteForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    if (confirm("Are you sure?")) {
-        this.submit();
-    }
+        if (confirm("Are you sure?")) {
+            this.submit();
+        }
+    });
 });

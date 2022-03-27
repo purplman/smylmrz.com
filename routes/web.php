@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProjectController;
@@ -57,6 +58,18 @@ Route::middleware('auth')->group(function() {
                 Route::get('/{project}', 'edit')->name('edit');
                 Route::put('/{project}', 'update')->name('update');
                 Route::delete('/{project}', 'destroy')->name('destroy');
+            });
+
+        Route::controller(AdminProductController::class)
+            ->name('products.')
+            ->prefix('products')
+            ->group(function() {
+                Route::get('/', 'index')->name('index');
+                Route::get('/create', 'create')->name('create');
+                Route::post('/store', 'store')->name('store');
+                Route::get('/{product}', 'edit')->name('edit');
+                Route::put('/{product}', 'update')->name('update');
+                Route::delete('/{product}', 'destroy')->name('destroy');
             });
         
     });

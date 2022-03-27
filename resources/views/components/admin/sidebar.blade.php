@@ -27,9 +27,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="">
+                        <a class="sidebar__link" href="{{ route('dashboard.products.index') }}">
                             <ion-icon name="storefront-outline"></ion-icon>
-                            <span>Store</span>
+                            <span>Products</span>
                         </a>
                     </li>
                     <li>
@@ -45,6 +45,12 @@
                     General
                 </div>
                 <ul>
+                    <li>
+                        <a class="sidebar__link" target="_blank" href="{{ route('home') }}">
+                            <ion-icon name="open-outline"></ion-icon>
+                            <span>Visit website</span>
+                        </a>
+                    </li>
                     <li>
                         <a class="sidebar__link" href="">
                             <ion-icon name="planet-outline"></ion-icon>
