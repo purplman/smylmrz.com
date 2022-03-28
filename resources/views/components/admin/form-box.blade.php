@@ -1,9 +1,9 @@
 <div class="form__box">
     <label class="form__label">
         <span>{{ $slot }}</span>
-        @isset ($required)
+        @if ($required)
         <span class="required">*</span>
-        @endisset
+        @endif
     </label>
     <input 
         {{ $attributes->merge(['class' => 'form__input']) }} 

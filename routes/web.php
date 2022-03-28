@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -70,6 +71,14 @@ Route::middleware('auth')->group(function() {
                 Route::get('/{product}', 'edit')->name('edit');
                 Route::put('/{product}', 'update')->name('update');
                 Route::delete('/{product}', 'destroy')->name('destroy');
+            });
+
+        Route::controller(SettingsController::class)
+            ->group(function() {
+                Route::get('/settings', 'settings')->name('settings');
+                Route::post('/store-link', 'updateStoreLink')->name('store.update');
+                Route::post('/copyright-text', 'updateCopyrightText')->name('copyright.update');
+                Route::post('/primary-email', 'updatePrimaryEmail')->name('email.update');
             });
         
     });

@@ -49,6 +49,7 @@ body {
 
 .form__box {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 .form__label {
   display: flex;
@@ -76,6 +77,10 @@ body {
 }
 .form__image {
   max-width: 10rem;
+}
+.form__row {
+  display: flex;
+  gap: 1.5rem;
 }
 .form__button {
   border: none;
@@ -381,4 +386,10 @@ body {
   border-top-left-radius: 2.5rem;
   border-bottom-left-radius: 2.5rem;
   min-height: 100vh;
+}
+
+.divider {
+  background: #24232a;
+  height: 1px;
+  margin-block: 2rem;
 }

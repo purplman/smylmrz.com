@@ -23,3 +23,9 @@
     border-bottom-left-radius: 2.5rem;
     min-height: 100vh;
 }
+
+.divider {
+    background: lighten($black, 5%);
+    height: 1px;
+    margin-block: 2rem;
+}

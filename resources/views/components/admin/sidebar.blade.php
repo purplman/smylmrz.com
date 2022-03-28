@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="">
+                        <a class="sidebar__link" href="{{ route('dashboard.settings') }}">
                             <ion-icon name="planet-outline"></ion-icon>
                             <span>Settings</span>
                         </a>
