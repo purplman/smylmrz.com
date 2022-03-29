@@ -1,4 +1,7 @@
 .form {
+    margin-bottom: 1.5rem;
+    width: 100%;
+
     &__box {
         margin-bottom: 1.5rem;
         width: 100%;
@@ -34,7 +37,11 @@
     }
 
     &__image {
-        max-width: 10rem;
+        width: 8rem;
+        height: 8rem;
+        -o-object-fit: contain;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
     }
 
     &__row {

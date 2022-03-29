@@ -9,7 +9,7 @@
         <div class="header__col">
             <div class="header__logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('img/logo.PNG') }}" alt="logo">
+                    <img src="{{ asset($logo) }}" alt="logo">
                 </a>
             </div>
         </div>

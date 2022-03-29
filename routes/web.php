@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'app.index')->name('home');

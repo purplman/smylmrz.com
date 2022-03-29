@@ -47,6 +47,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.form {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
 .form__box {
   margin-bottom: 1.5rem;
   width: 100%;
@@ -76,7 +80,11 @@ body {
   color: #f3f3f5;
 }
 .form__image {
-  max-width: 10rem;
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
 }
 .form__row {
   display: flex;

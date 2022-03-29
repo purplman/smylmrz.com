@@ -5,7 +5,7 @@
                 <div class="footer__col">
                     <div class="footer__brand">
                         <a href="">
-                            <img src="{{ asset('img/footer-logo.PNG') }}" alt="">
+                            <img src="{{ asset($footer_logo) }}" alt="">
                         </a>
                     </div>
                     <div class="footer__socials">
@@ -27,7 +27,7 @@
                     <p>Interested in working with me?</p>
                     <div>
                         <a href="mailto:smylmrzpro@gmail.com">
-                            smylmrzpro@gmail.com
+                            {{ $email }}
                         </a>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="footer__copyright">
-                © {{ now()->year }} smylmrz studio. All Rights Reserved.
+                © {{ now()->year }} {{ $copyright_text }}
             </div>
         </div>
     </div>
