@@ -28,6 +28,7 @@ class UpdateProjectRequest extends FormRequest
             'category' => ['required'],
             'date' => ['required'],
             'description' => ['required'],
+            'url' => ['required'],
         ];
     }
 }

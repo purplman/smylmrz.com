@@ -15,6 +15,9 @@
                 <x-admin.form-box class="form__input--dark" required="true" placeholder='Month, Year' name="date" type="text" value="">
                     Date
                 </x-admin.form-box>
+                <x-admin.form-box class="form__input--dark" required="true" placeholder='' name="url" type="url" value="">
+                    URL
+                </x-admin.form-box>
                 <div class="form__box">
                     <label class="form__label">
                         <span>Description</span>

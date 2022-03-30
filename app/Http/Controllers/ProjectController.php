@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -11,8 +12,11 @@ class ProjectController extends Controller
         return view('app.projects.index');
     }
 
-    public function show()
+    public function show(Project $project)
     {
-        return view('app.projects.show');
+        $nextProject = Project::where('id', '>', $project->id)->first();
+        $prevProject = Project::where('id', '<', $project->id)->orderByDesc('id')->first();
+
+        return view('app.projects.show', compact('project', 'nextProject', 'prevProject'));
     }
 }

@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'category' => ['required'],
             'date' => ['required'],
             'description' => ['required'],
+            'url' => ['required'],
         ];
     }
 }

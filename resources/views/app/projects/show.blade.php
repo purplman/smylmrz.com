@@ -20,16 +20,15 @@
             </div>
             <div class="case__info case__col">
                 <div class="case__subtitle">
-                    <h4>Web App</h4>
-                    <p>Janurary 2019</p>
+                    <h4>{{ $project->category }}</h4>
+                    <p>{{ $project->date }}</p>
                 </div>
                 <div class="case__title">
-                    <h1>Esport LLC</h1>
+                    <h1>{{ $project->title }}</h1>
                 </div>
                 <div class="case__description">
-                    <p class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Suscipit repudiandae maxime enim explicabo velit perspiciatis iusto amet eius quod natus,
-                        nobis sint excepturi exercitationem, quas earum, debitis numquam dolor fugit.
+                    <p class="mb-5">
+                        {{ $project->description }}
                     </p>
                     <h3>Task</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -38,7 +37,7 @@
                     </p>
                 </div>
                 <div class="case__cta">
-                    <a href="https://esport.az" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ $project->url }}" target="_blank" rel="noopener noreferrer">
                         <span>Open project</span>
                         <ion-icon name="open-outline"></ion-icon>
                     </a>
@@ -49,16 +48,24 @@
     
     <div class="card card--floating">
         <div class="d-flex mb-4 items-center">
-            <a class="trigger mr-2" href="">
+            @if ($prevProject)
+            <a class="trigger mr-2" href="{{ route('projects.show', $prevProject->id) }}">
                 <ion-icon name="arrow-back-outline"></ion-icon>
             </a>
-            <a class="trigger mr-4" href="">
+            @endif
+            @if ($nextProject)
+            <a class="trigger mr-4" href="{{ route('projects.show', $nextProject->id) }}">
                 <ion-icon name="arrow-forward-outline"></ion-icon>
             </a>
-            <h3>Next Project</h3>
+            @endif
+            <h3>{{ ($nextProject || !$prevProject) ? 'Next Project' : 'Previous Project' }}</h3>
         </div>
         <h2>
-            TradersYard
+            @if ($nextProject || !$prevProject)
+                {{ $nextProject->title.'-'.$nextProject->id }}
+            @else
+                {{ $prevProject->title.'-'.$prevProject->id }}
+            @endif
         </h2>
     </div>
     

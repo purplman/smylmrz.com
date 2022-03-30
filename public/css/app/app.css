@@ -1200,6 +1200,7 @@ footer {
 .project__subtitle {
   display: flex;
   padding-left: 4px;
+  gap: 0.5rem;
 }
 @media (min-width: 600px) {
   .project__subtitle {

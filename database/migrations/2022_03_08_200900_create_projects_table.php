@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->string('category');
             $table->string('date');
+            $table->string('url');
             $table->text('description');
             $table->timestamps();
         });

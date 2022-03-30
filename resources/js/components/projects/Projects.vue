@@ -2,6 +2,7 @@
     <div id="projects" class="projects">
         <div class="container">
             <div class="projects__grid">
+                <Spinner v-if="!projects.length" />
                 <Project
                     :project="project"
                     v-for="project in projects"
@@ -12,22 +13,20 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import Project from "./Project";
-export default {
-    data() {
-        return {
-            projects: [
-                {
-                    id: 1,
-                    name: "esport.az",
-                },
-            ],
-        };
-    },
-    mounted() {},
-    components: {
-        Project,
-    },
+import Spinner from "../Spinner.vue";
+import { ref, onMounted } from "vue";
+
+const projects = ref([]);
+
+const getProjects = async () => {
+    const { data } = await axios("/api/projects");
+
+    projects.value = data.data;
 };
+
+onMounted(() => {
+    getProjects();
+});
 </script>
