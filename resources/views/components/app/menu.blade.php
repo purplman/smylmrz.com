@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="menu__list-item">
-                    <a role="button" href="">
+                    <a role="button" href="{{ route('posts.index') }}">
                         <span>Blog</span>
                         <ion-icon name="add-outline"></ion-icon>
                     </a>

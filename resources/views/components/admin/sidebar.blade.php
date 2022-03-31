@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="">
+                        <a class="sidebar__link" href="{{ route('dashboard.posts.index') }}">
                             <ion-icon name="albums-outline"></ion-icon>
                             <span>Posts</span>
                         </a>
