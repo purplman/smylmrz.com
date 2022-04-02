@@ -1,5 +1,6 @@
 .newsletter-form {
     position: relative;
+    width: 100%;
 
     input {
         width: 100%;
@@ -19,5 +20,17 @@
         top: 50%;
         transform: translateY(-50%);
         color: $white;
+        font-weight: 500;
+    }
+
+    &--light {
+        input {
+            background: $chalk;
+            color: $black;
+        }
+
+        button {
+            color: $black;
+        }
     }
 }

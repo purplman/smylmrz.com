@@ -2,11 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-
-    @media (min-width: 600px) {
-        padding: 2rem 4rem;
-    }
+    padding-block: 2rem;
+    position: relative;
+    z-index: 2;
 
     &__col {
         width: 100%;
@@ -33,7 +31,12 @@
             height: 100%;
             vertical-align: middle;
             -webkit-filter: invert(1);
-                    filter: invert(1);
+            filter: invert(1);
+        }
+
+        &--posts {
+            padding-left: 2rem;
+            height: 4rem;
         }
     }
 

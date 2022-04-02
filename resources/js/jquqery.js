@@ -51,10 +51,4 @@ $(() => {
         const target = $(this).data("target");
         $(`#${target}`).find(".modal").removeClass("modal--active");
     });
-
-    $('a[role="button"]').on("click", (e) => {
-        e.preventDefault();
-
-        console.log("working");
-    });
 });

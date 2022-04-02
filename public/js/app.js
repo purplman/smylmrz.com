@@ -19628,10 +19628,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     var target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data("target");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#".concat(target)).find(".modal").removeClass("modal--active");
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('a[role="button"]').on("click", function (e) {
-    e.preventDefault();
-    console.log("working");
-  });
 });
 
 /***/ }),
@@ -49729,8 +49725,8 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/admin/app": 0,
-/******/ 			"css/app/app": 0
+/******/ 			"css/app/app": 0,
+/******/ 			"css/admin/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -49780,9 +49776,9 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/admin/app","css/app/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/admin/app","css/app/app"], () => (__webpack_require__("./resources/scss/app/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/admin/app","css/app/app"], () => (__webpack_require__("./resources/scss/admin/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app/app","css/admin/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app/app","css/admin/app"], () => (__webpack_require__("./resources/scss/app/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app/app","css/admin/app"], () => (__webpack_require__("./resources/scss/admin/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

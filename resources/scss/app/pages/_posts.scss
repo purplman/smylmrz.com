@@ -1,0 +1,45 @@
+.posts {
+    margin-top: -80px;
+
+    @media (min-width: 600px) {
+        margin-top: -128px;
+    }
+
+    &__header {
+        display: flex;
+        min-height: 50vh;
+        margin-bottom: 4rem;
+
+        > div {
+            display: flex;
+            padding-bottom: 2rem;
+            align-items: flex-end;
+        }
+
+        &__left {
+            padding-inline: 2rem;
+            background-color: $chalk;
+            width: 60%;
+            border-radius: 0 0 0.5rem 0.5rem;
+
+            h1 {
+                font-size: 4rem;
+                font-family: "Playfair Display";
+            }
+        }
+        &__right {
+            margin-left: 4rem;
+            width: calc(40% - 4rem);
+            border-bottom: 1px solid $chalk;
+
+            h4 {
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}
