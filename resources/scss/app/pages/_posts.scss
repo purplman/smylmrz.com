@@ -18,9 +18,10 @@
 
         &__left {
             padding-inline: 2rem;
-            background-color: $chalk;
+            background-color: lighten($color: $black, $amount: 2%);
             width: 60%;
             border-radius: 0 0 0.5rem 0.5rem;
+            color: $white;
 
             h1 {
                 font-size: 4rem;
