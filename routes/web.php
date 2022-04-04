@@ -21,6 +21,11 @@ Route::controller(ProjectController::class)->prefix('projects')->name('projects.
     Route::get('/{project}', 'show')->name('show');
 });
 
+Route::controller(PostController::class)->prefix('posts')->name('posts.')->group(function() {
+    Route::get('/', 'index')->name('index');
+    Route::get('/{post}', 'show')->name('show');
+});
+
 // Register
 Route::controller(RegisterController::class)->prefix('register')->name('register.')->group(function() {
     Route::get('/', 'index')->name('index');

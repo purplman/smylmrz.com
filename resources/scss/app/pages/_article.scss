@@ -1,0 +1,27 @@
+.article {
+    margin-bottom: 4rem;
+
+    &__container {
+        gap: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 100%;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 0.75fr 1fr;
+    }
+
+    &__image {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 2rem;
+        align-self: flex-start;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+}

@@ -3,7 +3,7 @@
         <div class="posts">
             <div class="posts__header">
                 <div class="posts__header__left">
-                    <h1>Aspire to inspire <br> before we expire</h1>
+                    <h1>{{ $post->title }}</h1>
                 </div>
                 <div class="posts__header__right">
                     <div>
@@ -14,10 +14,19 @@
             </div>
         </div>
 
-        <div class="posts__grid">
-            @foreach ($posts as $post)
-                <x-app.post :post="$post"></x-app.post>
-            @endforeach
+        <div class="article">
+            <div class="article__container">
+                <div class="article__content">
+                    <div class="article__image">
+                        <img src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-25/clb_blog_2-1024x1024.jpg" alt="">
+                    </div>
+                    <p>
+                        {{ $post->content }}
+                    </p>
+                </div>
+                <x-app.share></x-app.share>
+            </div>
+            
         </div>
     </div>
 </x-app.layouts.posts>

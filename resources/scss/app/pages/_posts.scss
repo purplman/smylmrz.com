@@ -6,22 +6,23 @@
     }
 
     &__header {
-        display: flex;
-        min-height: 50vh;
+        display: grid;
+        min-height: 25rem;
         margin-bottom: 4rem;
+        gap: 1rem;
+        grid-template-columns: 2fr 1fr;
 
         > div {
             display: flex;
-            padding-bottom: 2rem;
             align-items: flex-end;
         }
 
         &__left {
             padding-inline: 2rem;
             background-color: lighten($color: $black, $amount: 2%);
-            width: 60%;
             border-radius: 0 0 0.5rem 0.5rem;
             color: $white;
+            padding-bottom: 2rem;
 
             h1 {
                 font-size: 4rem;
@@ -29,18 +30,101 @@
             }
         }
         &__right {
-            margin-left: 4rem;
-            width: calc(40% - 4rem);
-            border-bottom: 1px solid $chalk;
+            padding-left: 1rem;
 
             h4 {
                 margin-bottom: 1rem;
                 font-weight: 400;
+                line-height: 1.7;
             }
 
             > div {
                 width: 100%;
             }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 4rem;
+    }
+}
+
+.post {
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__link {
+        display: flex;
+        color: darken($color: $chalk, $amount: 5%);
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &:hover {
+        ion-icon {
+            transform: translateX(5px);
+        }
+
+        .post__image {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+
+        &:hover:after {
+            opacity: 0.7;
+        }
+
+        img {
+            transition: 0.3s ease-out;
+        }
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            background: $black;
+            opacity: 0.5;
+            content: "";
+            transition: 0.3s ease-out;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        padding: 2rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 0.5rem;
+        }
+
+        ion-icon {
+            transition: 0.3s ease-out;
         }
     }
 }
