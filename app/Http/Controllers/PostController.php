@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderByDesc('id')->get();
 
         return view('app.posts.index', compact('posts'));
     }

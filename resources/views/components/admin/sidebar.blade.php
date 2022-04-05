@@ -27,13 +27,13 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="{{ route('dashboard.products.index') }}">
+                        <a class="sidebar__link {{ Route::current()->getName() == 'dashboard.products.index' ? 'sidebar__link--active' : '' }}" href="{{ route('dashboard.products.index') }}">
                             <ion-icon name="storefront-outline"></ion-icon>
                             <span>Products</span>
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="{{ route('dashboard.posts.index') }}">
+                        <a class="sidebar__link {{ Route::current()->getName() == 'dashboard.posts.index' ? 'sidebar__link--active' : '' }}" href="{{ route('dashboard.posts.index') }}">
                             <ion-icon name="albums-outline"></ion-icon>
                             <span>Posts</span>
                         </a>

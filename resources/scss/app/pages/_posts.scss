@@ -1,23 +1,23 @@
 .posts {
-    margin-top: -80px;
-
-    @media (min-width: 600px) {
-        margin-top: -128px;
-    }
+    margin-top: -128px;
 
     &__header {
         display: grid;
-        min-height: 25rem;
         margin-bottom: 4rem;
         gap: 1rem;
-        grid-template-columns: 2fr 1fr;
+        min-height: 28rem;
+        grid-template-columns: 1fr;
+        margin-inline: -1rem;
 
-        > div {
-            display: flex;
-            align-items: flex-end;
+        @media (min-width: 600px) {
+            grid-template-columns: 2fr 1fr;
+            min-height: 25rem;
+            margin-inline: 0;
         }
 
         &__left {
+            display: flex;
+            align-items: flex-end;
             padding-inline: 2rem;
             background-color: lighten($color: $black, $amount: 2%);
             border-radius: 0 0 0.5rem 0.5rem;
@@ -25,12 +25,22 @@
             padding-bottom: 2rem;
 
             h1 {
-                font-size: 4rem;
+                font-size: 3rem;
                 font-family: "Playfair Display";
+
+                @media (min-width: 600px) {
+                    font-size: 4rem;
+                }
             }
         }
         &__right {
             padding-left: 1rem;
+            display: none;
+
+            @media (min-width: 600px) {
+                display: flex;
+                align-items: flex-end;
+            }
 
             h4 {
                 margin-bottom: 1rem;
@@ -47,8 +57,12 @@
     &__grid {
         display: grid;
         gap: 2rem;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         margin-bottom: 4rem;
+
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 

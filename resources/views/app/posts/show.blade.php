@@ -16,15 +16,16 @@
 
         <div class="article">
             <div class="article__container">
+                <x-app.share></x-app.share>
                 <div class="article__content">
                     <div class="article__image">
                         <img src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-demo-25/clb_blog_2-1024x1024.jpg" alt="">
                     </div>
-                    <p>
-                        {{ $post->content }}
-                    </p>
+                    <div>
+                        {!! $post->content !!}
+                    </div>
                 </div>
-                <x-app.share></x-app.share>
+                
             </div>
             
         </div>
