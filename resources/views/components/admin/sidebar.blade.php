@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="sidebar__link" href="">
+                        <a class="sidebar__link" href="{{ route('dashboard.requests.index') }}">
                             <ion-icon name="mail-unread-outline"></ion-icon>
                             <span>Requests</span>
                         </a>

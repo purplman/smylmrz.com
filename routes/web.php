@@ -1,20 +1,27 @@
 <?php
 
-use App\Http\Controllers\Admin\ProductController as AdminProductController;
-use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
-use App\Http\Controllers\Admin\PostController as AdminPostController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
+use App\Http\Controllers\Admin\RequestController as AdminRequestController;
 
 Route::view('/', 'app.index')->name('home');
 Route::view('/store', 'app.store')->name('store');
-Route::view('/contact', 'app.contact')->name('contact');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+
+Route::controller(RequestController::class)->group(function(){
+    Route::get('/contact', 'index')->name('contact');
+    Route::post('/contact', 'handle')->name('request');
+});
 
 Route::controller(ProjectController::class)->prefix('projects')->name('projects.')->group(function() {
     Route::get('/', 'index')->name('index');
@@ -44,6 +51,12 @@ Route::middleware('auth')->group(function() {
     
     Route::prefix('dashboard')->name('dashboard.')->group(function() {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
+
+        Route::controller(AdminRequestController::class)->name('requests.')->prefix('requests')->group(function() {
+            Route::get('/', 'index')->name('index');
+            Route::get('/{request}', 'show')->name('show');
+            Route::delete('/{request}', 'destroy')->name('destroy');
+        });
 
         Route::controller(AdminProjectController::class)->name('projects.')->prefix('projects')->group(function() {
             Route::get('/', 'index')->name('index');

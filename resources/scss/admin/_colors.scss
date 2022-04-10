@@ -1,3 +1,15 @@
 $white: #fff;
 $chalk: #f3f3f5;
 $black: #18171c;
+
+.text-white {
+    color: $white;
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-muted {
+    color: #888;
+}

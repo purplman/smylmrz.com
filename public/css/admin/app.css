@@ -34,6 +34,18 @@ img {
   width: 100%;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.text-black {
+  color: #18171c;
+}
+
+.text-muted {
+  color: #888;
+}
+
 .errors {
   margin-bottom: 2rem;
   color: #da0a2c;
@@ -348,6 +360,9 @@ body {
   transition: 0.2s ease-out;
   border: none;
   font-size: 0.875rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .btn span {
   margin-right: 0.5rem;
