@@ -20,6 +20,7 @@
         "sass-loader": "^12.1.0"
     },
     "dependencies": {
+        "alpinejs": "^3.9.6",
         "froala-editor": "^4.0.10",
         "jquery": "^3.6.0",
         "vue": "^3.2.31",
