@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="{{ $favicon }}" />
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" x-data="{ menuOpen: false }">
         <x-app.cursor/>
 
         <x-app.modals.newsletter/>
@@ -33,6 +33,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" async></script>
 
     <script src="{{ mix('js/app.js') }}" defer></script>
+
+    @yield('scripts')
 
 </body>
 

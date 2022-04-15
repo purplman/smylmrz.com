@@ -28,14 +28,6 @@ $(() => {
         $(".custom-cursor").removeClass("hovering");
     });
 
-    $(document).on("click", () => {
-        $(".custom-cursor--outer").addClass("clicking");
-
-        setTimeout(() => {
-            $(".custom-cursor--outer").removeClass("clicking");
-        }, 250);
-    });
-
     // Modal scripts
 
     // Open modal

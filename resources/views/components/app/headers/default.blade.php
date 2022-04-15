@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header">
             <div class="header__col">
-                <div id="menu-opener" class="trigger menu-trigger">
+                <div @click="menuOpen = true" class="trigger menu-trigger">
                     <span></span>
                     <span></span>
                 </div>

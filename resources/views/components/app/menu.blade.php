@@ -1,8 +1,8 @@
 <!-- Menu -->
 <div id="menu">
-    <div class="menu">
+    <div class="menu" :class="menuOpen ? 'menu--active' : ''">
 
-        <div id="menu-closer" class="menu__closer trigger">
+        <div @click="menuOpen = false" class="menu__closer trigger">
           <ion-icon name="close-outline"></ion-icon>
         </div>
       

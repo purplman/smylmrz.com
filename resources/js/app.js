@@ -1,17 +1,21 @@
 import "./bootstrap";
 import "./jquqery";
 
-(() => {
-    const menu = document.querySelector(".menu");
-    // Menu scripts
-    document.getElementById("menu-opener").addEventListener("click", () => {
-        menu.classList.add("menu--active");
-    });
+document.addEventListener("click", () => {
+    document.querySelector(".custom-cursor--outer").classList.add("clicking");
 
-    document.getElementById("menu-closer").addEventListener("click", () => {
-        menu.classList.remove("menu--active");
-    });
-})();
+    setTimeout(() => {
+        document
+            .querySelector(".custom-cursor--outer")
+            .classList.remove("clicking");
+    }, 250);
+});
+
+import Alpine from "alpinejs";
+
+window.Alpine = Alpine;
+
+Alpine.start();
 
 // Vue
 import "./vue";
