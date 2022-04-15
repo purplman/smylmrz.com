@@ -6,10 +6,7 @@
                     <img src="{{ asset('img/blog-logo.PNG') }}" alt="logo">
                 </a>
             </div>
-            <div id="menu-opener" class="trigger menu-trigger">
-                <span></span>
-                <span></span>
-            </div>
+            <x-app.menu-opener></x-app.menu-opener>
         </div>
     </div>
 </section>

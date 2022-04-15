@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="{{ $favicon }}" />
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" x-data="{ menuOpen: false }">
         <x-app.cursor/>
 
         <x-app.modals.newsletter/>

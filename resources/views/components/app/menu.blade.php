@@ -21,28 +21,10 @@
                 <li class="menu__list-item">
                     <a role="button" href="{{ route('posts.index') }}">
                         <span>Blog</span>
-                        <ion-icon name="add-outline"></ion-icon>
                     </a>
-                    <ul class="dropdown">
-                        <li>
-                            <a href="">
-                                <span>Travel</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>Tech</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>Creative</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="menu__list-item">
-                    <a role="button" href="">
+                    <a role="button" href="#">
                         <span>Store</span>
                         <ion-icon name="add-outline"></ion-icon>
                     </a>
